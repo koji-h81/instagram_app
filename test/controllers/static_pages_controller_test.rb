@@ -7,18 +7,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Instagram App"
   end
 
-  test "should get search" do
-    get search_path
-    assert_response :success
-    assert_select "title", "Search | Instagram App"
-  end
-
-  test "should get notice" do
-    get notice_path
-    assert_response :success
-    assert_select "title", "Notice | Instagram App"
-  end
-
   test "should get mypage" do
     get mypage_path
     assert_response :success
