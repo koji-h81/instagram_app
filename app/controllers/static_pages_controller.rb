@@ -13,4 +13,7 @@ class StaticPagesController < ApplicationController
 
   def upload
   end
+  
+  def contact
+  end
 end
