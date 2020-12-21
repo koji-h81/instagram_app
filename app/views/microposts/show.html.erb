@@ -1,0 +1,22 @@
+<% @comments.each do |comment| %>
+<%= comment.user.name %>
+<%= comment.content %>
+<% end %>
+
+<%= form_with model: [@micropost, @comment], local: true do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+    <div class = 'form-group'>
+      <%= f.text_area :content, class: 'form-control',　id:'content', placeholder: "コメントを記入してください" %>
+    </div>
+
+    <%= f.submit "コメントする", class: "btn btn-primary" %>
+<% end %>
+
+<% @comments.each do |comment| %>
+  <div>
+    <%= comment.user.name %>
+    <%= comment.content %>
+    <%= link_to '削除', micropost_comment_path(@micropost, comment), method: :delete %>
+  </div>
+<% end %>
