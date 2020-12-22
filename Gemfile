@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
+gem 'font-awesome-sass'
 gem 'pry-rails'
 gem 'aws-sdk-s3',              '1.46.0', require: false
 gem 'image_processing', '~> 1.9.3'
