@@ -1,3 +1,5 @@
+<% provide(:title, 'Comment') %>
+
 <% @comments.each do |comment| %>
 <%= comment.user.name %>
 <%= comment.content %>
