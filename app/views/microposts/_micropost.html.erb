@@ -17,6 +17,10 @@
       <% end %>
     </span>
     
+    <span class="comment">
+      <%= link_to "コメントする", micropost %>
+    </span>
+    
     <span class="like" id="like_form_<%= micropost.id %>">
       <% if micropost.liked_by.include?(current_user) %>
         <%= render "microposts/unlike", micropost: micropost %>
